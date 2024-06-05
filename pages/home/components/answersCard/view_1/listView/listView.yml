@@ -1,0 +1,46 @@
+id: '17164668453520.6585108066292318'
+definitionId: listView
+parentSlotId: '17164667868370.5573517993205075'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 140
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 560
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 140
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 560
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{ui.responsesTable.selectedRow.data.responses}}'
+  limit: '6'
+  name: listView
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  heightMode: auto
+actions: {}
+slots:
+  - id: '17164668453520.3184661682093075'
+    name: content
+    children:
+      - gridViewItem/gridViewItem.yml

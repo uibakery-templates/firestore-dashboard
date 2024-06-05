@@ -1,0 +1,50 @@
+id: '17164667868370.873963562872244'
+definitionId: cardNew
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 19
+      y: 139
+      w: 5
+      h: 95
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 365
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: answersCard
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+actions: {}
+slots:
+  - id: '17164667868370.7660072793456747'
+    name: header
+    children:
+      - heading.yml
+  - id: '17164667868370.3838373275715299'
+    name: footer
+    children: []
+  - id: '17164667868370.06360839555985409'
+    name: views
+    children:
+      - view_1/view_1.yml

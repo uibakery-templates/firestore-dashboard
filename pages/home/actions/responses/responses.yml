@@ -1,0 +1,17 @@
+id: '17164630707250.6957999446445229'
+kind: store_item
+name: responses
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+storeItem:
+  value: '[]'
+  valueType: array
+  initialValue: '[]'
+  version: 1
+selected: true
+configured: true
+config:
+  preserveStateOnPageChange: false

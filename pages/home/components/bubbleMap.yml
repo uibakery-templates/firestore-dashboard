@@ -1,0 +1,45 @@
+id: '17164625128800.0553760756751287'
+definitionId: bubbleMap
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 16
+      y: 18
+      w: 8
+      h: 112
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 240
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 60
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 240
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: bubbleMap
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  data: '{{actions.getMapValues.data}}'
+  title: Responder Map
+  showLoading:
+    value: false
+    dataValue: '{{actions.fetchResponses.loading}}'
+    withData: true
+actions: {}
+slots: []

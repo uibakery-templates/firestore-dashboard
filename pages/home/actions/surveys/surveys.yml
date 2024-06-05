@@ -1,0 +1,17 @@
+id: '17164729558830.5342634436122344'
+kind: store_item
+name: surveys
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+storeItem:
+  value: ''
+  valueType: string
+  initialValue: ''
+  version: 1
+selected: true
+configured: true
+config:
+  preserveStateOnPageChange: false

@@ -1,0 +1,111 @@
+id: '17164658383790.3547954218353955'
+kind: workflow
+name: handleFilterChange
+nameConfigured: true
+steps:
+  - id: '17164658419350.5738136874189814'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17164660366150.43222232650833026'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17164630707250.6957999446445229'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17164730359920.05434792685888068'
+    type: customAsyncCode
+    name: code2
+    params:
+      - type: asyncCode
+        value: ./code2.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17164730752750.49477086146662397'
+    type: putInStore
+    name: save2
+    params:
+      - type: name
+        value: '17164729558830.5342634436122344'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17164729836540.8033666758957148'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17164651336500.8562237080702915'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.handleFilterChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.handleFilterChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.handleFilterChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17164639107370.8106501959675156'

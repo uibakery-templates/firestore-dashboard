@@ -1,0 +1,137 @@
+id: '17164627763550.026473142854319454'
+kind: workflow
+name: fetchResponses
+nameConfigured: true
+steps:
+  - id: '17164627864850.6386235811523648'
+    type: firebaseQuery
+    name: fetchResponses
+    params:
+      - type: datasourceId
+        value: Firebase Firestore
+        valueType: string
+        mustSelectFirst: true
+      - type: firebaseMethod
+        value: firestoreQuery
+        valueType: custom
+      - type: realtimeDbOrderingType
+        value: realtimeDbOrderingByChild
+        valueType: custom
+      - type: realtimeDbLimitType
+        value: realtimeDbLimitToFirst
+        valueType: custom
+      - type: objectUid
+        value: ''
+        valueType: interpolatedValue
+      - type: firebaseAuthListUsersNumberOfUsers
+        value: ''
+        valueType: interpolatedValue
+      - type: firebaseAuthEmail
+        value: ''
+        valueType: interpolatedValue
+      - type: firebaseAuthPhoneNumber
+        value: ''
+        valueType: interpolatedValue
+      - type: firestoreCollectionName
+        value: responses
+        valueType: interpolatedValue
+      - type: realtimeDbOrderByChildValue
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbLimitNumber
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbEqualTo
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbStartAt
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbEndAt
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbUseOrdering
+        value: false
+        valueType: custom
+      - type: realtimeDbUseLimit
+        value: false
+        valueType: custom
+      - type: realtimeDbUseEqualTo
+        value: false
+        valueType: custom
+      - type: realtimeDbUseStartAt
+        value: false
+        valueType: custom
+      - type: realtimeDbUseEndAt
+        value: false
+        valueType: custom
+      - type: dataObject
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: firestoreQueryFilters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: firestoreQueryOrdering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: successMapper
+        value: ./fetchResponses-successMapper.js
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17164630846680.6005218124892229'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17164630707250.6957999446445229'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17164639247740.6212375207991101'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.fetchResponses.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.fetchResponses.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.fetchResponses.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

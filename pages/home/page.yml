@@ -1,0 +1,41 @@
+id: '1'
+name: Home
+url: home
+slots:
+  - id: '1'
+    name: content
+    bindings: {}
+    children:
+      - id: '1'
+        definitionId: grid
+        parentSlotId: '1'
+        index: 0
+        styles: {}
+        properties:
+          name: grid
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        actions:
+          pageLoad:
+            - action: '17164638867100.3083816039449818'
+              paramCode: ''
+              index: 0
+        slots:
+          - id: '2'
+            name: content
+            bindings: {}
+            children:
+              - components/bubbleMap.yml
+              - components/responseChart.yml
+              - components/metric.yml
+              - components/responsesTable.yml
+              - components/surveyChart.yml
+              - components/select.yml
+              - components/metric2.yml
+              - components/answersCard/answersCard.yml
+              - components/metric3.yml
+              - components/dataHeader.yml
+              - components/statisticsHeader.yml
+              - components/metric4.yml
