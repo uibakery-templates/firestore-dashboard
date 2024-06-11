@@ -3,14 +3,10 @@ kind: workflow
 name: fetchSurveys
 nameConfigured: true
 steps:
-  - id: '17164632370670.7836111936792498'
+  - id: '17181065354130.8063848037596164'
     type: firebaseQuery
-    name: firebaseQuery
+    name: firebaseQuery2
     params:
-      - type: datasourceId
-        value: Firebase Firestore
-        valueType: string
-        mustSelectFirst: true
       - type: firebaseMethod
         value: firestoreQuery
         valueType: custom
@@ -94,9 +90,12 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: Firestore Template DB
+        valueType: custom
     level: 0
     fallthroughError: false
-    isChanged: true
+    isChanged: false
   - id: '17164731487710.05786178726588864'
     type: putInStore
     name: save

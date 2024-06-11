@@ -3,14 +3,10 @@ kind: workflow
 name: fetchResponses
 nameConfigured: true
 steps:
-  - id: '17164627864850.6386235811523648'
+  - id: '17181065296670.22738673426223843'
     type: firebaseQuery
     name: fetchResponses
     params:
-      - type: datasourceId
-        value: Firebase Firestore
-        valueType: string
-        mustSelectFirst: true
       - type: firebaseMethod
         value: firestoreQuery
         valueType: custom
@@ -94,9 +90,12 @@ steps:
       - type: mapperEnabled
         value: true
         valueType: custom
+      - type: datasourceId
+        value: Firestore Template DB
+        valueType: custom
     level: 0
     fallthroughError: false
-    isChanged: true
+    isChanged: false
     nameConfigured: true
   - id: '17164630846680.6005218124892229'
     type: putInStore
